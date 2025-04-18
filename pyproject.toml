@@ -1,0 +1,15 @@
+[project]
+name = "cv-analyze"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "asyncio>=3.4.3",
+    "boto3>=1.37.36",
+    "boto3-stubs[s3]>=1.37.36",
+    "bullmq>=2.13.1",
+    "pydantic>=2.11.3",
+    "pydantic-settings>=2.9.0",
+    "python-dotenv>=1.1.0",
+]
