@@ -16,6 +16,7 @@ async def main():
     signal.signal(signal.SIGINT, signal_handler)
 
     worker = Worker("videoQueue", analyze_video, {
+        "concurrency": 2,
         "connection": settings.REDIS_URL
     })
 
@@ -26,4 +27,5 @@ async def main():
     print("Worker shut down successfully.")
 
 if __name__ == "__main__":
+    print("Starting worker...")
     asyncio.run(main())
